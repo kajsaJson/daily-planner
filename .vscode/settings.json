@@ -1,0 +1,10 @@
+{
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+  "markdownlint.config": {
+    "MD033": false
+  },
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifierEnding": "js",
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true
+}

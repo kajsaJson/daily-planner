@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --txt: hsl(240, 100%, 97%);
+  --error: hsl(0, 100%, 63.83%);
+  --shadow: hsl(0, 0%, 0%, 0.8);
+
+  --main-1: hsl(210, 15%, 5%);
+  --main-2: hsl(225, 12%, 15%);
+  --main-3: hsl(230, 10%, 25%);
+  --main-4: hsl(230, 7%, 35%);
+  --main-5: hsl(230, 5%, 45%);
+  --main-6: hsl(240, 8%, 55%);
+  --main-7: hsl(240, 10%, 65%);
+
+  --accent-3: hsl(260, 80%, 40%);
+  --accent-4: hsl(260, 80%, 50%);
+  --accent-5: hsl(260, 100%, 60%);
+  --accent-6: hsl(260, 100%, 70%);
+  --accent-7: hsl(260, 100%, 80%);
+
+  --accent-alt-3: hsla(260, 80%, 40%, 0.5);
+  --accent-alt-5: hsla(260, 100%, 60%, 0.5);
+
+  --main-alt-1: hsla(210, 15%, 5%, 0.6);
+  --main-alt-4: hsla(230, 7%, 35%, 0.5);
+
+  --color-picker-1: hsla(190, 95%, 40%, 0.5);
+  --color-picker-2: hsla(250, 80%, 55%, 0.5);
+  --color-picker-3: hsla(310, 90%, 45%, 0.5);
+
+  --box-shadow: inset 10px 10px 30px -30px var(--main-5), 2px 2px 10px -5px var(--accent-alt-5);
+  --module-shadow: 5px 5px 10px -5px var(--shadow);
+}
+
+body.light {
+  --txt: hsl(240, 100%, 4%);
+  --error: hsl(0, 100%, 39.45%);
+  --shadow: hsl(240, 20%, 25%, 0.8);
+
+  --main-1: hsl(240, 20%, 98%);
+  --main-2: hsl(240, 20%, 90%);
+  --main-3: hsl(240, 20%, 80%);
+  --main-4: hsl(240, 20%, 70%);
+  --main-5: hsl(240, 20%, 60%);
+  --main-6: hsl(240, 20%, 50%);
+  --main-7: hsl(240, 20%, 40%);
+
+  --accent-3: hsl(260, 100%, 90%);
+  --accent-4: hsl(260, 100%, 80%);
+  --accent-5: hsl(260, 100%, 70%);
+  --accent-6: hsl(260, 100%, 60%);
+  --accent-7: hsl(260, 100%, 50%);
+
+  --accent-alt-3: hsla(260, 100%, 80%, 0.5);
+  --accent-alt-5: hsla(260, 100%, 60%, 0.5);
+
+  --main-alt-1: hsla(240, 20%, 98%, 0.6);
+  --main-alt-4: hsla(240, 20%, 70%, 0.5);
+
+  --color-picker-1: hsla(190, 100%, 70%, 0.5);
+  --color-picker-2: hsla(250, 100%, 75%, 0.5);
+  --color-picker-3: hsla(310, 100%, 70%, 0.5);
+
+  --box-shadow: inset 10px 10px 30px -30px var(--main-5), 2px 2px 10px -5px var(--accent-alt-5);
+  --module-shadow: 5px 5px 10px -5px var(--shadow);
+}
+
+html {
+  font-size: calc(15px + 0.390625vw);
+  font-family: 'Roboto', system-ui, sans-serif;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: var(--main-1);
+  color: var(--txt);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body > :first-child {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  font-size: inherit;
+}
+
+*::-webkit-scrollbar {
+  height: 0.375rem;
+  width: 0.375rem;
+  border-radius: 0.125rem;
+  scrollbar-color: var(--main-5) var(--main-3);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--main-5);
+  border-radius: 0.125rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--main-3);
+  border-radius: 0.125rem;
+}
+
+*::-webkit-scrollbar-corner,
+*::-webkit-scrollbar-button {
+  display: none;
+  visibility: hidden;
+}
+
+/* Link style + hover effect */
+.link-style {
+  color: var(--accent-7);
+  text-decoration: none;
+  filter: none;
+}
+
+.link-style:hover {
+  filter: contrast(110%);
+  text-decoration: underline;
+}
+
+/* Button style + hover effect */
+.button {
+  transition: all 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+.button-hover {
+  filter: contrast(120%) drop-shadow(1px 1px 2px var(--accent-5));
+  box-shadow: inset 50px 70px 80px -80px var(--accent-alt-5);
+  text-shadow: 0 0 5px var(--main-1);
+}
+
+/* Disabled button style */
+.disabled {
+  filter: grayscale(50%) opacity(70%);
+}
+
+/* Input autofill styling for Webkit browsers */
+input[type='email']:hover,
+input[type='email']:focus,
+input[type='email']:active,
+input[type='email']:-webkit-autofill,
+input[type='email']:-webkit-autofill:hover,
+input[type='email']:-webkit-autofill:focus,
+input[type='email']:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s; /* Hack to prevent the browser from changing the background color */
+  -webkit-text-fill-color: var(--txt) !important;
+  background-color: var(--main-1) !important;
+}

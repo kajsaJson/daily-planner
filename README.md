@@ -4,6 +4,8 @@
 
 A minimalistic full-stack daily planner app 📅✨
 
+Built in React using TypeScript.
+
 ## Why?
 
 To demonstrate clean and organized coding practices alongside an understanding of key development concepts. 💡
